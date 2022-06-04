@@ -1,28 +1,30 @@
+package Dfs;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class P15684_2 {
+public class P15684 {
 
-    static int N, M, H;
+    static int width, height, M, ans;
     static int[][] map;
     static boolean isFinish = false;
-    static int answer;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
+        width = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        H = Integer.parseInt(st.nextToken());
+        height = Integer.parseInt(st.nextToken());
 
-        map = new int[H + 1][N + 1];
+        map = new int[height + 1][width + 1];
 
-        for (int i = 0; i < M; i++) {
+        for (int y = 0; y < M; y++) {
             st = new StringTokenizer(br.readLine());
+
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
@@ -31,28 +33,28 @@ public class P15684_2 {
         }
 
         for (int i = 0; i <= 3; i++) {
-            answer = i;
+            ans = i;
             dfs(1, 1, 0);
             if (isFinish) break;
         }
 
-        System.out.print((isFinish ? answer : -1));
+        System.out.print((isFinish ? ans : -1));
     }
 
-    static void dfs(int row, int col, int count) {
+    static void dfs(int x, int y, int addHorizontalLineNumber) {
         if (isFinish) return;
-        if (answer == count) {
+        if (ans == addHorizontalLineNumber) {
             if (check()) isFinish = true;
             return;
         }
 
-        for (int i = row; i <= H; i++) {
-            for (int j = col; j < N; j++) {
+        for (int i = y; i <= height; i++) {
+            for (int j = x; j < width; j++) {
                 if (map[i][j] == 0 && map[i][j + 1] == 0) {
                     map[i][j] = 1;
                     map[i][j + 1] = 2;
 
-                    dfs(1, 1, count + 1);
+                    dfs(1, 1, addHorizontalLineNumber + 1);
 
                     map[i][j] = 0;
                     map[i][j + 1] = 0;
@@ -62,17 +64,19 @@ public class P15684_2 {
     }
 
     static boolean check() {
-        for (int i = 1; i <= N; i++) {
-            int nextHeight = 1;
-            int nextWidth = i;
+        for (int i = 1; i <= width; i++) {
+            int nx = i;
+            int ny = 1;
 
-            while (nextHeight <= H) {
-                if (map[nextHeight][nextWidth] == 1) nextWidth++;
-                else if (map[nextHeight][nextWidth] == 2) nextWidth--;
-                nextHeight++;
+            while (ny <= height) {
+                if (map[ny][nx] == 1) nx++;
+                else if (map[ny][nx] == 2) nx--;
+                ny++;
             }
-            if (nextWidth != i) return false;
+
+            if (nx != i) return false;
         }
+
         return true;
     }
 }
