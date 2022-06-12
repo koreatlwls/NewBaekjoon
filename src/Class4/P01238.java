@@ -5,26 +5,27 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-class Town implements Comparable<Town> {
-    int end;
-    int weight;
-
-    Town(int end, int weight) {
-        this.end = end;
-        this.weight = weight;
-    }
-
-    @Override
-    public int compareTo(Town arg0) {
-        return weight - arg0.weight;
-    }
-}
-
 public class P01238 {
 
     static final int INF = 987654321;
     static ArrayList<ArrayList<Town>> arrList, reverse_arrList;
     static int N, X;
+
+    static class Town implements Comparable<Town> {
+        int end;
+        int weight;
+
+        Town(int end, int weight) {
+            this.end = end;
+            this.weight = weight;
+        }
+
+        @Override
+        public int compareTo(Town arg0) {
+            return weight - arg0.weight;
+        }
+    }
+
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
