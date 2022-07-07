@@ -4,9 +4,9 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.util.*
 
-val br = BufferedReader(InputStreamReader(System.`in`))
+private val br = BufferedReader(InputStreamReader(System.`in`))
 
-fun main() = with(br) {
+private fun main() = with(br) {
     val input = br.readLine()
 
     var stack = Stack<Char>()
