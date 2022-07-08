@@ -53,8 +53,7 @@ private fun choiceSwap(n : Int, r: Int, c : Int){
 
 }
 
-
-private fun main() = with(System.out.bufferedWriter()){
+fun main() = with(System.out.bufferedWriter()){
 
     val n = br.readLine().toInt()
     graph = Array(n){br.readLine().toCharArray()}

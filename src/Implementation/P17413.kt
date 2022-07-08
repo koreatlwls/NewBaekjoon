@@ -6,7 +6,7 @@ import java.util.*
 
 private val br = BufferedReader(InputStreamReader(System.`in`))
 
-private fun main() = with(br) {
+fun main() = with(br) {
     val input = br.readLine()
 
     var stack = Stack<Char>()
