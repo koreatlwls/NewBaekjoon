@@ -1,10 +1,11 @@
-package Implementation
+package Implementation;
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
 private val br = BufferedReader(InputStreamReader(System.`in`))
 
+/*
 fun main() = with(System.out.bufferedWriter()) {
 
     val K = br.readLine().toInt()
@@ -41,4 +42,4 @@ fun main() = with(System.out.bufferedWriter()) {
 
     write("${(maxWidth * maxHigh - emptyHigh * emptyWidth) * K}")
     close()
-}
+}*/

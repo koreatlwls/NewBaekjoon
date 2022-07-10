@@ -1,8 +1,9 @@
-package Implementation
+package Implementation;
 
 import kotlin.math.min
 
-fun main(args: Array<String>) = with(System.`in`.bufferedReader()) {
+/*
+fun main() = with(System.`in`.bufferedReader()) {
     val n = readLine().toInt()
     val switches = BooleanArray(n) { false }
     readLine()
@@ -47,4 +48,4 @@ fun main(args: Array<String>) = with(System.`in`.bufferedReader()) {
             .chunked(20)
             .joinToString("\n") { it.joinToString(" ") }
     )
-}
+}*/

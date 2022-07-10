@@ -1,13 +1,10 @@
-package Implementation
+package Implementation;
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import java.util.*
 
-private val br = BufferedReader(InputStreamReader(System.`in`))
-
-fun main() = with(br) {
-    val input = br.readLine()
+/*
+fun main() = with(System.`in`.bufferedReader()) {
+    val input = readLine()
 
     var stack = Stack<Char>()
     var inOut = false
@@ -40,4 +37,4 @@ fun main() = with(br) {
     while(stack.isNotEmpty()){
         print(stack.pop())
     }
-}
+}*/

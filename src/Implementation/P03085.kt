@@ -1,4 +1,4 @@
-package Implementation
+package Implementation;
 
 private val br = System.`in`.bufferedReader()
 private val dirXY : Array<IntArray> = arrayOf(intArrayOf(0,1),intArrayOf(1,0),intArrayOf(-1,0),intArrayOf(0,-1))
@@ -7,7 +7,7 @@ private var answer =0
 private var max=0
 private lateinit var graph : Array<CharArray>
 
-private fun findMax(n : Int){
+fun findMax(n : Int){
     for(r in 0 until n){
         var curC = graph[r][0]
         var cCnt = 0
@@ -36,7 +36,7 @@ private fun findMax(n : Int){
     }
 }
 
-private fun choiceSwap(n : Int, r: Int, c : Int){
+fun choiceSwap(n : Int, r: Int, c : Int){
 
     for(dir in 0 until 4){
         val nr = r + dirXY[dir][0]
@@ -53,6 +53,7 @@ private fun choiceSwap(n : Int, r: Int, c : Int){
 
 }
 
+/*
 fun main() = with(System.out.bufferedWriter()){
 
     val n = br.readLine().toInt()
@@ -71,4 +72,4 @@ fun main() = with(System.out.bufferedWriter()){
     write("$answer")
 
     close()
-}
+}*/
