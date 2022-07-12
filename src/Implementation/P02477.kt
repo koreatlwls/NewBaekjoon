@@ -1,20 +1,14 @@
 package Implementation;
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
+fun main() {
 
-private val br = BufferedReader(InputStreamReader(System.`in`))
-
-/*
-fun main() = with(System.out.bufferedWriter()) {
-
-    val K = br.readLine().toInt()
+    val K = readln().toInt()
     val arr = Array(6){Pair(0,0)}
     var maxHigh = 0
     var maxWidth = 0
 
     for (i in arr.indices) {
-        val (dir, value) = br.readLine().split(" ").map { it.toInt() }
+        val (dir, value) = readln().split(" ").map { it.toInt() }
         arr[i] = Pair(dir, value)
         when(dir){
             1,2 ->{
@@ -40,6 +34,5 @@ fun main() = with(System.out.bufferedWriter()) {
         }
     }
 
-    write("${(maxWidth * maxHigh - emptyHigh * emptyWidth) * K}")
-    close()
-}*/
+    println("${(maxWidth * maxHigh - emptyHigh * emptyWidth) * K}")
+}

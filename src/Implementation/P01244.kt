@@ -2,19 +2,18 @@ package Implementation;
 
 import kotlin.math.min
 
-/*
-fun main() = with(System.`in`.bufferedReader()) {
-    val n = readLine().toInt()
+fun main()  {
+    val n = readln().toInt()
     val switches = BooleanArray(n) { false }
-    readLine()
+    readln()
         .split(" ")
         .forEachIndexed { index, s ->
             switches[index] = s != "0"
         }
-    val t = readLine().toInt()
+    val t = readln().toInt()
 
     for (i in 0 until t) {
-        var (gender, idx) = readLine().split(" ").map { it.toInt() }
+        var (gender, idx) = readln().split(" ").map { it.toInt() }
         idx--
 
         when (gender) {
@@ -48,4 +47,4 @@ fun main() = with(System.`in`.bufferedReader()) {
             .chunked(20)
             .joinToString("\n") { it.joinToString(" ") }
     )
-}*/
+}

@@ -2,12 +2,11 @@ package Implementation
 
 import java.util.*
 
-/*
-fun main() = with(System.`in`.bufferedReader()) {
-    var testCase = readLine().toInt()
+fun main()  {
+    var testCase = readln().toInt()
 
     while (testCase-- > 0) {
-        val(n, target) = readLine().split(" ").map{it.toInt()}
+        val(n, target) = readln().split(" ").map{it.toInt()}
 
         val queue : Queue<Pair<Int, Int>> = LinkedList()
         val pq : PriorityQueue<Int> = PriorityQueue(Collections.reverseOrder())
@@ -36,4 +35,4 @@ fun main() = with(System.`in`.bufferedReader()) {
 
         println(count)
     }
-}*/
+}

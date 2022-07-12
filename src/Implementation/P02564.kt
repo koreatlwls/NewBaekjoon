@@ -3,15 +3,15 @@ package Implementation;
 import kotlin.math.abs
 import kotlin.math.min
 
-/*fun main() = with(System.`in`.bufferedReader()) {
-    val(N, M) = readLine().split(" ").map{it.toInt()}
-    val K = readLine().toInt()
+fun main() {
+    val(N, M) = readln().split(" ").map{it.toInt()}
+    val K = readln().toInt()
     var cnt = 0
     var police = 0
     val map = IntArray(K)
 
     for(i in 0 .. K){
-        val(dir, loc) = readLine().split(" ").map{it.toInt()}
+        val(dir, loc) = readln().split(" ").map{it.toInt()}
         var tmp = 0
         when(dir){
             1 ->{
@@ -39,4 +39,4 @@ import kotlin.math.min
     }
 
     println(cnt)
-}*/
+}
